@@ -120,11 +120,12 @@
 
   /* ---------- CHANNEL / CONTACT ---------- */
   .channel{background:linear-gradient(160deg,#10162e,#1d264a);text-align:center;}
-  .channel .glow-moon{
-    width:90px;height:90px;border-radius:50%;margin:0 auto 28px;
-    background:radial-gradient(circle at 40% 38%,#fff7e0,#e6c87a 60%,#cda668 100%);
-    box-shadow:0 0 60px 20px rgba(230,200,122,.35);
+  .channel-banner{
+    max-width:760px;margin:10px auto 32px;border-radius:16px;overflow:hidden;
+    box-shadow:0 26px 60px rgba(0,0,0,.55),0 0 70px rgba(230,200,122,.15);
+    border:1px solid rgba(230,200,122,.22);
   }
+  .channel-banner img{width:100%;display:block;}
   .channel h2{margin-bottom:18px;}
   .channel .lead{margin:0 auto 36px;}
   .links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
@@ -223,9 +224,10 @@
   <!-- CHANNEL -->
   <section class="channel" id="channel">
     <div class="wrap">
-      <div class="glow-moon"></div>
       <span class="eyebrow">Channel</span>
-      <h2>月のみちびき</h2>
+      <div class="channel-banner reveal">
+        <img src="images/banner.png" alt="月のみちびき 〜月の灯りがしめす路〜 チャンネルバナー" loading="lazy" />
+      </div>
       <p class="lead">言葉が必要な夜に、そっと。<br>AIでつくる、癒やしの映像物語をお届けしています。</p>
       <div class="links">
         <a class="btn solid" href="https://www.youtube.com/@Tsuki-no-Michibiki" target="_blank" rel="noopener">YouTubeで見る ▶</a>
