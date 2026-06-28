@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RE-NO ｜ 月のみちびき – AIクリエイティブ・ポートフォリオ</title>
+<meta name="description" content="RE-NO（リノ）のポートフォリオ。AIで作る癒やしの映像物語チャンネル「月のみちびき」。油彩タッチの情景・物語・朗読・YouTube運営の制作実績。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg-deepest:#0a0e1f; --bg-base:#10162e; --surface:#181f3a;
+    --moon-gold:#e6c87a; --soft-gold:#f0dca0; --star-blue:#8fb3d9;
+    --text:#f3f1e9; --text-2:#b9c2d6; --muted:#7a839c;
+    --serif:'Shippori Mincho','Yu Mincho',serif;
+    --sans:'Zen Kaku Gothic New','Hiragino Sans',sans-serif;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg-base);color:var(--text);
+    font-family:var(--sans);line-height:1.9;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{padding:110px 0;}
+  .eyebrow{
+    font-family:var(--serif);color:var(--moon-gold);letter-spacing:.3em;
+    font-size:.8rem;text-transform:uppercase;margin-bottom:18px;display:block;
+  }
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,4vw,2.6rem);
+     letter-spacing:.04em;margin-bottom:14px;line-height:1.5;}
+  .lead{color:var(--text-2);max-width:640px;font-size:1.02rem;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    background:linear-gradient(160deg,#0a0e1f 0%,#141b38 55%,#1d264a 100%);
+    overflow:hidden;
+  }
+  .stars{position:absolute;inset:0;z-index:0;}
+  .star{position:absolute;background:#fff;border-radius:50%;opacity:.0;
+        animation:twinkle 4s infinite ease-in-out;}
+  @keyframes twinkle{0%,100%{opacity:.15;}50%{opacity:.9;}}
+  .moon{
+    position:absolute;top:12%;right:9%;width:170px;height:170px;border-radius:50%;
+    background:radial-gradient(circle at 38% 38%,#fff7e0 0%,#f0dca0 45%,#d8b765 100%);
+    box-shadow:0 0 80px 30px rgba(230,200,122,.35),0 0 160px 60px rgba(230,200,122,.18);
+    z-index:1;
+  }
+  .moon::after{content:"";position:absolute;inset:0;border-radius:50%;
+    background:radial-gradient(circle at 65% 30%,rgba(0,0,0,.05) 0 10%,transparent 11%),
+               radial-gradient(circle at 40% 62%,rgba(0,0,0,.06) 0 8%,transparent 9%);}
+  .hero-inner{position:relative;z-index:2;}
+  .hero h1{
+    font-family:var(--serif);font-weight:700;
+    font-size:clamp(2.6rem,7vw,5rem);line-height:1.25;letter-spacing:.05em;
+    margin-bottom:22px;
+  }
+  .hero h1 .gold{color:var(--moon-gold);}
+  .hero p.tag{font-size:clamp(1rem,2.4vw,1.3rem);color:var(--text-2);max-width:560px;margin-bottom:38px;}
+  .cta{display:inline-flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--serif);letter-spacing:.08em;font-size:.95rem;
+    padding:14px 30px;border-radius:999px;border:1px solid var(--moon-gold);
+    color:var(--moon-gold);transition:.3s;
+  }
+  .btn:hover{background:var(--moon-gold);color:var(--bg-deepest);}
+  .btn.solid{background:var(--moon-gold);color:var(--bg-deepest);}
+  .btn.solid:hover{background:var(--soft-gold);}
+  .scroll-hint{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
+    color:var(--muted);font-size:.75rem;letter-spacing:.2em;z-index:2;animation:float 2.4s infinite;}
+  @keyframes float{0%,100%{transform:translateX(-50%) translateY(0);opacity:.5;}50%{transform:translateX(-50%) translateY(8px);opacity:1;}}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--bg-deepest);}
+  .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  .about .portrait{
+    aspect-ratio:4/5;border-radius:14px;overflow:hidden;position:relative;
+    box-shadow:0 30px 70px rgba(0,0,0,.5);border:1px solid rgba(230,200,122,.18);
+  }
+  .about .portrait img{width:100%;height:100%;object-fit:cover;display:block;}
+  .about .portrait::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 55%,rgba(10,14,31,.55) 100%);}
+
+  /* ---------- WORKS ---------- */
+  .works{background:var(--bg-base);}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+  .card{
+    position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/2;
+    border:1px solid rgba(143,179,217,.12);background:var(--surface);
+    transition:transform .4s,box-shadow .4s;cursor:pointer;
+  }
+  .card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s;}
+  .card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.55);}
+  .card:hover img{transform:scale(1.06);}
+  .card .meta{
+    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:20px;background:linear-gradient(180deg,transparent 40%,rgba(7,10,22,.86) 100%);
+    opacity:0;transition:opacity .4s;
+  }
+  .card:hover .meta{opacity:1;}
+  .card .meta .t{font-family:var(--serif);font-size:1.05rem;color:var(--soft-gold);margin-bottom:4px;}
+  .card .meta .s{font-size:.78rem;color:var(--text-2);letter-spacing:.05em;}
+
+  /* ---------- SKILLS ---------- */
+  .skills{background:var(--bg-deepest);}
+  .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:48px;}
+  .skill{
+    background:var(--surface);border:1px solid rgba(230,200,122,.12);
+    border-radius:14px;padding:32px;transition:.35s;
+  }
+  .skill:hover{border-color:rgba(230,200,122,.4);transform:translateY(-4px);}
+  .skill .ico{font-size:1.8rem;margin-bottom:14px;}
+  .skill h3{font-family:var(--serif);font-size:1.2rem;color:var(--soft-gold);margin-bottom:8px;font-weight:600;}
+  .skill p{color:var(--text-2);font-size:.92rem;}
+
+  /* ---------- CHANNEL / CONTACT ---------- */
+  .channel{background:linear-gradient(160deg,#10162e,#1d264a);text-align:center;}
+  .channel .glow-moon{
+    width:90px;height:90px;border-radius:50%;margin:0 auto 28px;
+    background:radial-gradient(circle at 40% 38%,#fff7e0,#e6c87a 60%,#cda668 100%);
+    box-shadow:0 0 60px 20px rgba(230,200,122,.35);
+  }
+  .channel h2{margin-bottom:18px;}
+  .channel .lead{margin:0 auto 36px;}
+  .links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+  footer{background:var(--bg-deepest);padding:48px 0;text-align:center;color:var(--muted);font-size:.82rem;}
+  footer .sep{color:var(--moon-gold);margin:0 8px;}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(max-width:820px){
+    section{padding:80px 0;}
+    .about .grid{grid-template-columns:1fr;gap:36px;}
+    .gallery{grid-template-columns:1fr 1fr;}
+    .skill-grid{grid-template-columns:1fr;}
+    .moon{width:110px;height:110px;top:9%;right:8%;}
+  }
+  @media(max-width:520px){.gallery{grid-template-columns:1fr;}}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;}
+    .reveal{opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="stars" id="stars"></div>
+    <div class="moon"></div>
+    <div class="wrap hero-inner">
+      <h1>月明かりで、<br><span class="gold">物語</span>をつくる。</h1>
+      <p class="tag">RE-NO（リノ）｜ AIを相棒に、心がふっと軽くなる映像物語を制作するクリエイター。</p>
+      <div class="cta">
+        <a class="btn solid" href="#works">作品を見る</a>
+        <a class="btn" href="#channel">チャンネルへ</a>
+      </div>
+    </div>
+    <div class="scroll-hint">SCROLL ↓</div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="wrap">
+      <div class="grid">
+        <div class="reveal">
+          <span class="eyebrow">About</span>
+          <h2>AIと二人三脚で、<br>月明かりのような作品を。</h2>
+          <p class="lead">
+            YouTubeチャンネル「<strong>月のみちびき</strong>」を一人で企画・制作・運営しています。
+            AIで生成した油彩タッチの情景と、静かな朗読で、見る人の心がふっと軽くなる映像物語を届けるチャンネルです。
+            <br><br>
+            画像も、物語も、編集も、投稿も、分析も——AIを使いこなして、一人でぜんぶ。
+            「無理に励まさず、小さな灯りをそっと置く」を制作理念にしています。🌙
+          </p>
+        </div>
+        <div class="portrait reveal">
+          <img src="images/03-ippo.png" alt="月あかりの一歩 – 油彩タッチの月夜の情景" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS -->
+  <section class="works" id="works">
+    <div class="wrap">
+      <span class="eyebrow reveal">Works</span>
+      <h2 class="reveal">制作実績  — 月のみちびき</h2>
+      <p class="lead reveal">すべてAIで生成した、油彩タッチの情景作品。物語の世界観を一枚の絵に込めています。</p>
+      <div class="gallery">
+        <div class="card reveal"><img src="images/01-dokohe.png" alt="どこへ向かえばいいのだろう" loading="lazy"><div class="meta"><div class="t">どこへ向かえばいいのだろう</div><div class="s">月の灯りにゆれる夜</div></div></div>
+        <div class="card reveal"><img src="images/02-michi.png" alt="選んだ道が、誰かを支える" loading="lazy"><div class="meta"><div class="t">選んだ道が、誰かを支える</div><div class="s">月が夢を照らす夜</div></div></div>
+        <div class="card reveal"><img src="images/04-kaketemo.png" alt="月は欠けても" loading="lazy"><div class="meta"><div class="t">月は欠けても</div><div class="s">自己肯定の記録</div></div></div>
+        <div class="card reveal"><img src="images/05-yoru.png" alt="眠れない夜に" loading="lazy"><div class="meta"><div class="t">眠れない夜に</div><div class="s">大人のための読み聞かせ</div></div></div>
+        <div class="card reveal"><img src="images/06-kioku.png" alt="月灯りにゆれる記憶" loading="lazy"><div class="meta"><div class="t">月灯りにゆれる記憶</div><div class="s">静かな余韻</div></div></div>
+        <div class="card reveal"><img src="images/03-ippo.png" alt="月あかりの一歩" loading="lazy"><div class="meta"><div class="t">月あかりの一歩</div><div class="s">再出発のひとひら</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills">
+    <div class="wrap">
+      <span class="eyebrow reveal">Skills</span>
+      <h2 class="reveal">AIでできること</h2>
+      <div class="skill-grid">
+        <div class="skill reveal"><div class="ico">🎨</div><h3>AI画像生成</h3><p>油彩タッチの世界観をAIで構築。ブランドの統一感を保ったまま、物語ごとの情景を量産します。</p></div>
+        <div class="skill reveal"><div class="ico">📖</div><h3>AI物語・台本制作</h3><p>体験のエッセンスを抽出し、感情に寄り添う物語へ。朗読を前提とした読みやすい台本に整えます。</p></div>
+        <div class="skill reveal"><div class="ico">🎬</div><h3>映像編集・朗読演出</h3><p>声・間（ま）・BGM・字幕で「癒やし」を設計。静かな余韻が残る映像に仕上げます。</p></div>
+        <div class="skill reveal"><div class="ico">📊</div><h3>YouTube運営</h3><p>企画・サムネ・概要欄・投稿・分析までワンストップ。AIワークフローで一人運用を実現しています。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANNEL -->
+  <section class="channel" id="channel">
+    <div class="wrap">
+      <div class="glow-moon"></div>
+      <span class="eyebrow">Channel</span>
+      <h2>月のみちびき</h2>
+      <p class="lead">言葉が必要な夜に、そっと。<br>AIでつくる、癒やしの映像物語をお届けしています。</p>
+      <div class="links">
+        <a class="btn solid" href="https://www.youtube.com/@Tsuki-no-Michibiki" target="_blank" rel="noopener">YouTubeで見る ▶</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © 2026 RE-NO（リノ）<span class="sep">/</span>月のみちびき<span class="sep">/</span>AI Creative Portfolio
+    </div>
+  </footer>
+
+<script>
+  // 星をランダム生成
+  (function(){
+    const box=document.getElementById('stars');
+    if(!box) return;
+    const n=70;
+    for(let i=0;i<n;i++){
+      const s=document.createElement('div');
+      s.className='star';
+      const size=Math.random()*2+1;
+      s.style.width=size+'px';s.style.height=size+'px';
+      s.style.left=Math.random()*100+'%';
+      s.style.top=Math.random()*70+'%';
+      s.style.animationDelay=(Math.random()*4)+'s';
+      box.appendChild(s);
+    }
+  })();
+  // スクロールで出現
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

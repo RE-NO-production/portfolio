@@ -1,0 +1,53 @@
+# design-prompt.yaml
+# 月のみちびき / RE-NO ポートフォリオ用デザインシステム（抽象化版）
+# 別サイトにも流用できるよう、具体的な文言・レイアウトは含めず「配色・雰囲気」を定義
+
+concept:
+  name: "Moonlit Oil-Painting Portfolio"
+  mood: ["静謐", "癒やし", "上品", "余韻", "夜の安らぎ"]
+  metaphor: "月明かりに照らされた夜 — 暗がりの中にそっと灯る、あたたかな光"
+  keywords: ["oil painting", "moonlight", "night sky", "serene", "healing", "dignified"]
+
+color_palette:
+  background:
+    deepest: "#0a0e1f"   # 夜空の最も深い藍
+    base:    "#10162e"   # ベース背景
+    surface: "#181f3a"   # カード面
+  accent:
+    moon_gold:  "#e6c87a" # 月の金・主役のアクセント
+    soft_gold:  "#f0dca0"
+    star_blue:  "#8fb3d9" # 星明かりの淡い青
+  text:
+    primary:   "#f3f1e9"  # 生成りの白（やわらかい）
+    secondary: "#b9c2d6"  # 補助テキスト
+    muted:     "#7a839c"
+  gradients:
+    hero: "linear-gradient(160deg, #0a0e1f 0%, #141b38 55%, #1d264a 100%)"
+    glow: "radial-gradient(circle, rgba(230,200,122,0.35) 0%, rgba(230,200,122,0) 70%)"
+
+typography:
+  heading:
+    family: "'Shippori Mincho', 'Yu Mincho', serif"  # 明朝・上品・物語性
+    weight: [500, 600]
+    letter_spacing: "0.04em"
+  body:
+    family: "'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif"
+    weight: [400]
+    line_height: 1.9
+  scale: "ゆったり大きめ・行間広め・余白を恐れない"
+
+atmosphere:
+  lighting: "high-contrast moonlight — 暗い背景に金色の光がにじむ"
+  texture: "subtle film grain / 油彩のような厚み"
+  motion: "ゆっくりフェードイン・スクロールでそっと現れる・派手な動きは避ける"
+  decoration: ["glowing full moon", "scattered soft stars", "faint light rays"]
+
+layout_principles:
+  - "余白を主役にする（情報を詰め込まない）"
+  - "1カラム中心・作品はグリッドで静かに並べる"
+  - "ヒーローは月夜のグラデーション＋金の見出し"
+  - "セクション間はたっぷり間（ま）をとる"
+
+accessibility:
+  contrast: "本文は背景に対し十分なコントラストを確保"
+  motion: "prefers-reduced-motion を尊重しアニメを抑制"
