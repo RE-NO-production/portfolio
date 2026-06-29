@@ -55,6 +55,10 @@
     background:radial-gradient(circle at 65% 30%,rgba(0,0,0,.05) 0 10%,transparent 11%),
                radial-gradient(circle at 40% 62%,rgba(0,0,0,.06) 0 8%,transparent 9%);}
   .hero-inner{position:relative;z-index:2;}
+  .backbar{position:absolute;top:0;left:0;right:0;z-index:6;}
+  .backbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:22px;}
+  .backbar a{font-family:var(--serif);font-size:.82rem;letter-spacing:.1em;color:var(--text-2);transition:.3s;}
+  .backbar a:hover{color:var(--moon-gold);}
   .hero h1{
     font-family:var(--serif);font-weight:700;
     font-size:clamp(2.6rem,7vw,5rem);line-height:1.25;letter-spacing:.05em;
@@ -174,6 +178,12 @@
   <header class="hero">
     <div class="stars" id="stars"></div>
     <div class="moon"></div>
+    <div class="backbar">
+      <div class="wrap">
+        <a href="../rinopro/index.html">← RINO PRODUCTION（ホーム）</a>
+        <a href="../portfolio-senior/index.html">シニア恋愛劇場 →</a>
+      </div>
+    </div>
     <div class="wrap hero-inner">
       <h1>月明かりで、<br><span class="gold">物語</span>をつくる。</h1>
       <p class="tag">RE-NO（リノ）｜ AIを相棒に、心がふっと軽くなる映像物語を制作するクリエイター。</p>
